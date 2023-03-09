@@ -1,0 +1,6 @@
+Download de Model Name: VGG16
+
+https://docs-assets.developer.apple.com/coreml/models/VGG16.mlmodel
+
+
+https://github.com/alephao/CoreMLExample

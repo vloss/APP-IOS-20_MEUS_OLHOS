@@ -16,7 +16,7 @@ class ObjectsViewController: UIViewController {
     @IBOutlet weak var lbIdentifier: UILabel!
     @IBOutlet weak var lbConfidence: UILabel!
     
-    lazy captureManager: CaptureManager = {
+    lazy var captureManager: CaptureManager = {
         let captureManager = CaptureManager()
         captureManager.videoBufferDelegate = self
         return captureManager
@@ -24,6 +24,15 @@ class ObjectsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lbConfidence.text = ""
+        lbIdentifier.text = ""
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let previewLayer = captureManager.startCameraCapture() else {return}
+        previewLayer.frame = viCamera.bounds
+        viCamera.layer.addSublayer(previewLayer)
     }
     
     @IBAction func analyse(_ sender: UIButton) {
@@ -32,6 +41,8 @@ class ObjectsViewController: UIViewController {
 
 extension ObjectsViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        
+        guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {return}
         
         guard let model = try? VNCoreMLModel(for: VGG16().model) else { return }
         let request = VNCoreMLRequest(model: model) { request, error in
@@ -43,12 +54,13 @@ extension ObjectsViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             guard let firstObservation = results.first else {return}
             
             DispatchQueue.main.async {
-                lbIdentifier.text = firstObservation.identifier
+                self.lbIdentifier.text = firstObservation.identifier
                 
                 let confidence = round(firstObservation.confidence*1000) / 10
-                lbConfidence.text = "\(confidence)%"
+                self.lbConfidence.text = "\(confidence)%"
             }
-            
         }
+        
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer).perform([request])
     }
 }

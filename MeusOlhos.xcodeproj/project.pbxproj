@@ -12,6 +12,8 @@
 		A19212511FA6BE8F00F371EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A192124F1FA6BE8F00F371EA /* Main.storyboard */; };
 		A19212531FA6BE8F00F371EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A19212521FA6BE8F00F371EA /* Assets.xcassets */; };
 		A19212561FA6BE8F00F371EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A19212541FA6BE8F00F371EA /* LaunchScreen.storyboard */; };
+		B79177E729BA1F65009A4AC4 /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B79177E629BA1F65009A4AC4 /* VGG16.mlmodel */; };
+		B79177E929BA7E97009A4AC4 /* CaptureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79177E829BA7E97009A4AC4 /* CaptureManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A19212521FA6BE8F00F371EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A19212551FA6BE8F00F371EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A19212571FA6BE8F00F371EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B79177E629BA1F65009A4AC4 /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VGG16.mlmodel; sourceTree = "<group>"; };
+		B79177E829BA7E97009A4AC4 /* CaptureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 			children = (
 				A192124B1FA6BE8F00F371EA /* AppDelegate.swift */,
 				A192124D1FA6BE8F00F371EA /* ObjectsViewController.swift */,
+				B79177E829BA7E97009A4AC4 /* CaptureManager.swift */,
 				A192124F1FA6BE8F00F371EA /* Main.storyboard */,
+				B79177E629BA1F65009A4AC4 /* VGG16.mlmodel */,
 				A19212521FA6BE8F00F371EA /* Assets.xcassets */,
 				A19212541FA6BE8F00F371EA /* LaunchScreen.storyboard */,
 				A19212571FA6BE8F00F371EA /* Info.plist */,
@@ -138,6 +144,8 @@
 			files = (
 				A192124E1FA6BE8F00F371EA /* ObjectsViewController.swift in Sources */,
 				A192124C1FA6BE8F00F371EA /* AppDelegate.swift in Sources */,
+				B79177E929BA7E97009A4AC4 /* CaptureManager.swift in Sources */,
+				B79177E729BA1F65009A4AC4 /* VGG16.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -59,6 +59,8 @@ extension ObjectsViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                     if let results = request.results {
                         for observation in results where observation is VNRecognizedObjectObservation {
                             
+                            print("results: ", results)
+                            
                             guard let objectObservation = observation as? VNRecognizedObjectObservation else {
                                 continue
                             }

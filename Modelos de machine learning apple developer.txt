@@ -1,0 +1,56 @@
+Modelos de machine learning apple developer
+
+Imagem - Metadados/Texto
+Modelos que recebem dados de imagem como entrada e fornecem informações úteis sobre a imagem.
+
+TextDetection - Detecção de texto usando o modelo integrado Vision em tempo real. 
+PhotoAssessment - Avaliação de fotos usando Core ML e Metal. 
+PoseEstimation - Estimativa de pose humana a partir de uma imagem para celular. 
+MobileNet - Detecta os objetos dominantes presentes em uma imagem. 
+Places CNN - Detecta a cena de uma imagem de 205 categorias como quarto, floresta, costa etc. 
+Inception v3 - Detecta os objetos dominantes presentes em uma imagem. 
+ResNet50 - Detecta os objetos dominantes presentes em uma imagem. 
+VGG16 - Detecta os objetos dominantes presentes em uma imagem. 
+Reconhecimento de carro - Preveja a marca e o modelo de um carro. 
+YOLO - Reconhecer quais são os objetos dentro de uma determinada imagem e onde eles estão na imagem. 
+AgeNet - Preveja a idade de uma pessoa a partir de um retrato. 
+GenderNet - Preveja o gênero de uma pessoa a partir de seu retrato. 
+MNIST - Preveja dígitos manuscritos (desenhados) a partir de imagens. 
+EmotionNet - Preveja a emoção de uma pessoa a partir de seu retrato. 
+SentimentVision - Preveja sentimentos positivos ou negativos de imagens. 
+Food101 - Preveja o tipo de alimentos a partir de imagens. 
+Oxford102 - Detecta o tipo de flores das imagens. 
+FlickrStyle - Detecta o estilo artístico das imagens. 
+RN1015k500 - Preveja o local onde uma foto foi tirada. 
+Nudez - Classifica uma imagem como NSFW (nu) ou SFW (não nua) 
+TextRecognition (ML Kit) - Reconhecimento de texto usando o modelo integrado do ML Kit em tempo real. 
+ImageSegmentation - Segmente os pixels de um quadro de câmera ou imagem em um conjunto predefinido de classes. 
+DepthPrediction - Preveja a profundidade de uma única imagem. 
+
+
+Imagem - Imagem
+Modelos que transformam imagens.
+
+HED - Detecta bordas aninhadas de uma imagem colorida. 
+AnimeScale2x - Processe uma obra de arte estilo anime em escala bicúbica 
+Texto - Metadados/Texto
+
+
+
+Modelos que processam dados de texto
+Sentiment Polarity - Preveja sentimentos positivos ou negativos de frases. 
+DocumentClassification - Classifique artigos de notícias em 1 de 5 categorias. 
+Detecção de Spam do iMessage - Detecta se uma mensagem é spam. 
+NamesDT - Classificação de gênero usando o DecisionTreeClassifier 
+Detecção de Personalidade - Preveja a personalidade com base nos documentos do usuário (frases). 
+BERT para respostas a perguntas - Implementação Swift Core ML 3 de BERT para respostas a perguntas 
+GPT-2 - OpenAI GPT-2 Geração de texto (Core ML 3) 
+
+
+Diversos
+Exermote - Prevê o exercício, quando o iPhone é usado no braço direito. 
+GestureAI - Recomende um artista com base em determinado local e gênero. 
+Recomendação de Artistas - Recomende um artista com base em determinado local e gênero. 
+
+
+https://github.com/likedan/Awesome-CoreML-Models

@@ -36,7 +36,11 @@ class CaptureManager {
                 print(error.localizedDescription)
                 return nil
             }
-            captureSession.startRunning()
+            
+            DispatchQueue.global(qos: .background).async {
+                self.captureSession.startRunning()
+            }
+            //captureSession.startRunning()
             
             let videoDataOutput = AVCaptureVideoDataOutput()
             videoDataOutput.setSampleBufferDelegate(videoBufferDelegate, queue: DispatchQueue(label: "cameraQueue"))
